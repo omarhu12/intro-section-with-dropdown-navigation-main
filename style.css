@@ -232,6 +232,7 @@ main section div.heroImg img {
     display: block;
     z-index: 5;
     right: 0%;
+    overflow: scroll;
   }
   aside ul {
     padding: 1rem;
