@@ -11,6 +11,16 @@
   display: none;
 }
 
+  aside {
+    width: 60%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    animation: animate-open 0.3s linear;
+  }
 body {
   font-family: "Epilogue", sans-serif;
   width: 100%;
@@ -211,17 +221,6 @@ main section div.heroImg img {
     height: 120vh;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
-  }
-
-  aside {
-    width: 60%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: none;
-    animation: animate-open 0.3s linear;
   }
 
   aside {
