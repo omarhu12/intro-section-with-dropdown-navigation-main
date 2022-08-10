@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(0, 0%, 98%);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 1rem;
+}
+header nav div.leftNav {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+header nav div.dropMenus {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#mobile {
+  display: none;
+}
+
+header nav div.dropMenus ul {
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+header nav div.dropMenus ul:hover {
+  font-weight: 700;
+  opacity: 1;
+  cursor: pointer;
+}
+
+header nav div.dropMenus ul i img {
+  margin-left: 3px;
+  rotate: 180deg;
+}
+
+header nav div div.menu {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px 3px #ebebeb;
+  padding: 2rem 1.5rem;
+  border-radius: 0.4rem;
+  list-style: none;
+  position: absolute;
+  /* width: 14rem; */
+  top: 10%;
+  display: none;
+}
+
+header nav div.dropMenus div.menu--1.active {
+  display: block;
+}
+header nav div.dropMenus div.menu--2.active {
+  display: block;
+}
+
+header nav div.dropMenus div.menu--1 {
+  margin-right: 3rem;
+}
+
+header nav div.dropMenus div.menu--2 {
+  margin-left: 2rem;
+}
+
+header nav div.dropMenus div.menu li {
+  margin-bottom: 1rem;
+  /* opacity: 0.7; */
+}
+
+header nav div.dropMenus div.menu li i img {
+  margin-right: 0.8rem;
+}
+
+header nav div.dropMenus div.drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  /* position: relative; */
+}
+header nav div.dropMenus ul#first.active i img {
+  rotate: 0deg;
+}
+header nav div.dropMenus ul#second.active i img {
+  rotate: 0deg;
+}
+
+header nav div.dropMenus strong {
+  opacity: 0.5;
+}
+header nav div.dropMenus strong:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+header nav div.dropMenus strong {
+  opacity: 0.5;
+}
+
+header nav div.CTAsBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  margin-right: 2rem;
+  opacity: 0.6;
+}
+
+header nav div.CTAsBtn button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+header nav div.CTAsBtn button:nth-last-of-type(1) {
+  border: 2px solid rgb(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+main section {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  height: 75vh;
+  align-items: center;
+  padding-top: 8rem;
+}
+
+main section div.first {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-left: 7rem;
+}
+
+main section div.first h1 {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+}
+
+main section div.first p {
+  width: 23rem;
+  opacity: 0.6;
+  line-height: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+main section div.first button.hero {
+  background-color: black;
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 0.7rem;
+}
+
+main section div.first div.company {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 2.5rem;
+  margin: 2rem 0;
+}
+
+main section div.first button.hero:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+main section div.heroImg {
+  width: 50%;
+  height: 100%;
+  /* height: 100vh; */
+}
+main section div.heroImg img {
+  width: 100%;
+  height: 85vh;
+  object-fit: contain;
+  padding-right: 0rem;
+  margin-top: -10rem;
+}
+
+@media (max-width: 1000px) {
+  .background-blur.show {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 120vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+  }
+
+  aside {
+    width: 60%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    animation: animate-open 0.3s linear;
+  }
+
+  aside {
+    padding: 1.5rem;
+    opacity: 1;
+  }
+
+  aside.active {
+    display: block;
+    z-index: 5;
+    right: 0%;
+  }
+  aside ul {
+    padding: 1rem;
+    opacity: 0.6;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  aside.active ul#firstMobile i img {
+    rotate: 180deg;
+  }
+  aside ul#secondMobile i img {
+    rotate: 180deg;
+  }
+  aside.active ul#firstMobile.show i img {
+    rotate: 0deg;
+  }
+  aside.active ul#secondMobile.show i img {
+    rotate: 0deg;
+  }
+
+  aside.active p {
+    padding: 1rem;
+    opacity: 0.6;
+    font-weight: 700;
+  }
+
+  aside.active div.CTAsBtnMobile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.4rem;
+    gap: 1rem;
+  }
+  aside.active div.CTAsBtnMobile button {
+    border: transparent;
+    background-color: transparent;
+    font-size: 1.1rem;
+    opacity: 0.6;
+  }
+
+  aside.active div.CTAsBtnMobile button:nth-last-of-type(1) {
+    border: 2px solid black;
+    border-radius: 13px;
+    padding: 0.5rem;
+  }
+
+  aside.active ul#firstMobile {
+    margin-top: 8rem;
+  }
+  div.dropMenuMobile {
+    list-style: none;
+    padding: 2rem;
+    display: none;
+  }
+
+  ul#firstMobile div.dropMenuMobile.first.show {
+    display: block;
+  }
+  ul#secondMobile div.dropMenuMobile.second.show {
+    display: block;
+  }
+
+  div.dropMenuMobile i img {
+    margin-right: 1rem;
+  }
+  div.dropMenuMobile li {
+    padding: 0.4rem;
+    font-size: 1rem;
+    width: 9rem;
+  }
+  .hamburger {
+    position: relative;
+    display: block;
+    width: 55px;
+    z-index: 30;
+    /* height: 35px; */
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+
+  .hamburger .bar,
+  .hamburger:after,
+  .hamburger:before {
+    content: "";
+    display: block;
+    width: 80%;
+    border-radius: 5px;
+    height: 5px;
+    background-color: #111;
+    margin: 6px 0px;
+    transition: 0.4s;
+  }
+
+  .hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+
+  .hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+  }
+
+  .hamburger.is-active .bar {
+    opacity: 0;
+  }
+  main section {
+    padding: 0;
+  }
+  section {
+    flex-direction: column;
+    height: auto;
+    padding-top: 0;
+  }
+  .CTAsBtn {
+    display: none;
+  }
+
+  .dropMenus ul,
+  strong {
+    display: none;
+  }
+
+  .logo {
+    display: block;
+  }
+
+  #mobile {
+    display: block;
+  }
+
+  main section div.first {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 0;
+    text-align: center;
+    order: 2;
+  }
+
+  main section div.first h1 {
+    font-size: 8vw;
+  }
+  main section div.first p {
+    /* margin: 0; */
+    text-align: center;
+    margin: 2rem auto;
+    width: auto;
+    position: relative;
+    z-index: -1;
+  }
+
+  main section div.heroImg {
+    width: 100%;
+    height: fit-content;
+    /* height: 100vh; */
+  }
+
+  main section div.heroImg img {
+    width: 100%;
+    height: fit-content;
+    object-fit: contain;
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  main section div.first div.company {
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  main section div.first div.company i img {
+    width: 100%;
+  }
+
+  #desktop {
+    display: none;
+  }
+}

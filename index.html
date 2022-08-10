@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style> -->
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="leftNav">
+          <div class="logo">
+            <i><img src="./images/logo.svg" alt="" /></i>
+          </div>
+          <div class="dropMenus">
+            <div class="drop">
+              <ul id="first">
+                Features
+                <i><img src="./images/icon-arrow-up.svg" alt="" /></i>
+              </ul>
+              <div class="menu menu--1">
+                <li>
+                  <i><img src="./images/icon-todo.svg" alt="" /></i> Todo List
+                </li>
+                <li>
+                  <i
+                    ><img src="./images/icon-calendar.svg" alt="" /> Calender</i
+                  >
+                </li>
+                <li>
+                  <i><img src="./images/icon-reminders.svg" alt="" /></i
+                  >Reminders
+                </li>
+                <li>
+                  <i><img src="./images/icon-planning.svg" alt="" /></i>Planning
+                </li>
+              </div>
+            </div>
+            <div class="drop">
+              <ul id="second">
+                Company
+                <i><img src="./images/icon-arrow-up.svg" alt="" /></i>
+              </ul>
+              <div class="menu menu--2">
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </div>
+            </div>
+            <strong>Careers</strong>
+            <strong>About</strong>
+          </div>
+        </div>
+
+        <div class="CTAsBtn">
+          <button>Login</button>
+          <button>Register</button>
+        </div>
+
+        <button class="hamburger">
+          <div class="bar"></div>
+        </button>
+      </nav>
+      <aside>
+        <ul id="firstMobile">
+          Features
+          <i><img src="./images/icon-arrow-up.svg" alt="" /></i>
+          <div class="dropMenuMobile first">
+            <li>
+              <i><img src="./images/icon-todo.svg" alt="" /></i> Todo List
+            </li>
+            <li>
+              <i><img src="./images/icon-calendar.svg" alt="" /> Calender</i>
+            </li>
+            <li>
+              <i><img src="./images/icon-reminders.svg" alt="" /></i>Reminders
+            </li>
+            <li>
+              <i><img src="./images/icon-planning.svg" alt="" /></i>Planning
+            </li>
+          </div>
+        </ul>
+        <ul id="secondMobile">
+          Company
+          <i><img src="./images/icon-arrow-up.svg" alt="" /></i>
+          <div class="dropMenuMobile second">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </div>
+        </ul>
+        <p>Careers</p>
+        <p>About</p>
+        <div class="CTAsBtnMobile">
+          <button>Login</button>
+          <button>Register</button>
+        </div>
+      </aside>
+    </header>
+    <main>
+      <section>
+        <div class="first">
+          <div class="heroTxt">
+            <h1>
+              Make <br />
+              remote work
+            </h1>
+            <p>
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+            <button class="hero">Learn more</button>
+          </div>
+
+          <div class="company">
+            <i><img src="./images/client-databiz.svg" alt="" /></i>
+            <i><img src="./images/client-audiophile.svg" alt="" /></i>
+            <i><img src="./images/client-meet.svg" alt="" /></i>
+            <i><img src="./images/client-maker.svg" alt="" /></i>
+          </div>
+        </div>
+        <div class="heroImg">
+          <img id="desktop" src="./images/image-hero-desktop.png" alt="" />
+          <img id="mobile" src="./images/image-hero-mobile.png" alt="" />
+        </div>
+        <div class="background-blur"></div>
+      </section>
+    </main>
+  </body>
+</html>
